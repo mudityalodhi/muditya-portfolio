@@ -10,6 +10,7 @@ const Hero = () => {
     >
       {/* Animated Blobs */}
       <div className="absolute -top-32 -left-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-blue-300 dark:bg-blue-800 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
+      
       <div className="absolute -bottom-20 -right-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-purple-300 dark:bg-purple-800 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
 
       {/* Main Grid Content */}
@@ -19,10 +20,13 @@ const Hero = () => {
         <div className="text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
             Hi, I'm{" "}
-            <span className="text-blue-600 dark:text-blue-400">MUDITYA LODHI</span>
+            <span className="text-blue-600 dark:text-blue-400">
+              MUDITYA LODHI
+            </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-xl mx-auto md:mx-0">
-            A passionate Frontend Developer creating responsive & beautiful web interfaces with React & Tailwind.
+            A passionate Frontend Developer creating responsive & beautiful web
+            interfaces with React & Tailwind.
           </p>
 
           <div className="flex justify-center md:justify-start gap-6 mb-6">

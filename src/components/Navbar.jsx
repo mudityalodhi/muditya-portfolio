@@ -19,10 +19,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-4 inset-x-0 z-50 px-4">
+    <nav className="fixed top-4 inset-x-0 z-50 flex justify-center px-2">
       <div
-        className={`mx-auto w-full max-w-5xl flex items-center justify-between h-14 px-4 sm:px-6 lg:px-8 rounded-full bg-white/50 backdrop-blur-md border border-blue-100 shadow-md transition-all duration-300 ${scrolled ? "shadow-xl" : ""
-          }`}
+        className={`w-full max-w-[90%] md:max-w-5xl flex items-center justify-between h-14 px-4 rounded-full bg-white/50 backdrop-blur-md border border-blue-100 shadow-md transition-all duration-300 ${
+          scrolled ? "shadow-xl" : ""
+        }`}
       >
         {/* Logo */}
         <div className="text-lg sm:text-xl font-bold tracking-wider text-blue-600">
@@ -56,8 +57,8 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {navOpen && (
-        <div className="md:hidden mt-2 px-4">
-          <div className="w-full max-w-5xl mx-auto bg-white/95 backdrop-blur-md rounded-xl shadow-xl py-4 space-y-2">
+        <div className="absolute top-[70px] w-full px-4 md:hidden z-40">
+          <div className="bg-white/95 backdrop-blur-md rounded-xl shadow-xl py-4 space-y-2 max-w-[90%] mx-auto">
             {navLinks.map((link) => (
               <a
                 key={link.name}
