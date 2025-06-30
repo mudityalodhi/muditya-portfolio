@@ -1,12 +1,13 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import shelfy from "../assets/project_img/shelfy.png"
 
 // Dummy project list (replace with your real projects)
 const projectList = [
   {
     title: "Shelfy",
     desc: "An E-commerce website built using Reactjs, Nodejs, Express and MongoDB.",
-    img: "https://via.placeholder.com/300x180.png?text=Portfolio",
+    img: {shelfy},
     tech: ["React", "Tailwind", "Vite", "Node", "MongoDB","Express"],
     live: "https://shelfy-ten.vercel.app/",
     github: "https://github.com/mudityalodhi/shelfy",

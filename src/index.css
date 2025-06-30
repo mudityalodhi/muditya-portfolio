@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 * {
-    font-family: REM;
+    font-family: REM, Outfit, sans-serif;
 }
 
 body {
