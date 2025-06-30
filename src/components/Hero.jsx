@@ -1,13 +1,14 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import profile from "../assets/muditprofile.jpg"
+import profile from "../assets/muditprofile.jpg";
+
 const Hero = () => {
   return (
     <section
       id="home"
       className="min-h-screen flex items-center justify-center bg-white px-4 overflow-x-hidden"
     >
-      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12">
+      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12 py-10">
         
         {/* 🔹 Left Text Content */}
         <div className="text-center md:text-left flex-1">
@@ -41,7 +42,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* 🔸 CTA Button */}
           <a
             href="#contact"
             className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition shadow"
@@ -50,8 +50,8 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* 🔹 Right: Optional Placeholder Image (if you want) */}
-        <div className="flex-1 hidden md:flex justify-center">
+        {/* 🔹 Right Image (Visible on All Screens Now) */}
+        <div className="flex-1 flex justify-center">
           <div className="w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden border-4 border-orange-300 shadow-lg">
             <img
               src={profile}

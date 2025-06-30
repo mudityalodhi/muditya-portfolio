@@ -13,14 +13,15 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-white shadow-md">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-16 py-3">
+      {/* Container */}
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 h-16">
         {/* Logo */}
         <a href="#home" className="text-2xl font-bold text-orange-500">
           ML
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-6 font-medium text-gray-800">
+        <ul className="hidden md:flex items-center space-x-8 font-medium text-gray-800">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
@@ -33,30 +34,30 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Toggle Button */}
+        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button
             onClick={() => setNavOpen(!navOpen)}
-            className="text-orange-500 text-xl"
+            className="text-orange-500 text-2xl focus:outline-none"
           >
             {navOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          navOpen ? "max-h-60 py-3" : "max-h-0"
+        className={`md:hidden transition-all duration-300 ease-in-out bg-white overflow-hidden ${
+          navOpen ? "max-h-64 py-4" : "max-h-0 py-0"
         }`}
       >
-        <ul className="flex flex-col items-center space-y-3 bg-white px-6 pt-4 pb-6 shadow-md rounded-b-lg font-medium text-gray-800">
+        <ul className="flex flex-col items-center space-y-4 font-medium text-gray-800">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
                 onClick={() => setNavOpen(false)}
-                className="block hover:text-orange-500 transition"
+                className="text-base hover:text-orange-500 transition"
               >
                 {link.name}
               </a>
