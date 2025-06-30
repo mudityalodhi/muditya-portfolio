@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
 import profile from "../assets/muditprofile.jpg";
 
 const Hero = () => {
@@ -8,16 +9,29 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center bg-white px-4 overflow-x-hidden"
     >
-      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12 py-10">
+      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-16 py-10">
         
         {/* 🔹 Left Text Content */}
         <div className="text-center md:text-left flex-1">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">
-            Muditya Lodhi
+            Hi, I'm Muditya Lodhi
           </h1>
-          <h2 className="text-orange-500 text-xl sm:text-2xl font-semibold mb-4">
-            Aspiring Frontend Developer | React & Tailwind Enthusiast
-          </h2>
+
+          <TypeAnimation
+            sequence={[
+              "Full Stack Developer",
+              2000,
+              "MERN Stack Developer",
+              2000,
+              "React & Node Enthusiast",
+              2000,
+            ]}
+            wrapper="h2"
+            cursor={true}
+            repeat={Infinity}
+            className="text-orange-500 text-xl sm:text-2xl font-semibold mb-4"
+          />
+
           <p className="text-gray-700 text-lg mb-6">
             I build clean, responsive, and modern websites.
           </p>
@@ -50,7 +64,7 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* 🔹 Right Image (Visible on All Screens Now) */}
+        {/* 🔹 Right Image */}
         <div className="flex-1 flex justify-center">
           <div className="w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden border-4 border-orange-300 shadow-lg">
             <img
@@ -60,7 +74,6 @@ const Hero = () => {
             />
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const navLinks = [
@@ -10,9 +10,25 @@ const navLinks = [
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // ✅ Scroll listener
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 bg-white shadow-md">
+    <nav
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/70 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
       {/* Container */}
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 h-16">
         {/* Logo */}

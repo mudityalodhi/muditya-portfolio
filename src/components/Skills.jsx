@@ -15,7 +15,7 @@ import vscodeLogo from "../assets/tech_logo/vscode.png";
 
 const Skills = () => {
   return (
-    <section className="bg-gray-900 text-white py-16 px-4">
+    <section className="bg-gray-600 text-white py-16 px-4">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-12">⚙️ Tech Stack / Skills</h2>
 
