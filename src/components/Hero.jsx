@@ -1,64 +1,58 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import profile from "../assets/muditprofile.jpg";
-
+import profile from "../assets/muditprofile.jpg"
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-white via-blue-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex items-center py-16"
+      className="min-h-screen flex items-center justify-center bg-white px-4 overflow-x-hidden"
     >
-      {/* Animated Blobs */}
-      <div className="absolute -top-32 -left-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-blue-300 dark:bg-blue-800 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
-      
-      <div className="absolute -bottom-20 -right-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-purple-300 dark:bg-purple-800 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
-
-      {/* Main Grid Content */}
-      <div className="z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12">
         
-        {/* Left: Text */}
-        <div className="text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
-            Hi, I'm{" "}
-            <span className="text-blue-600 dark:text-blue-400">
-              MUDITYA LODHI
-            </span>
+        {/* 🔹 Left Text Content */}
+        <div className="text-center md:text-left flex-1">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">
+            Muditya Lodhi
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-xl mx-auto md:mx-0">
-            A passionate Frontend Developer creating responsive & beautiful web
-            interfaces with React & Tailwind.
+          <h2 className="text-orange-500 text-xl sm:text-2xl font-semibold mb-4">
+            Aspiring Frontend Developer | React & Tailwind Enthusiast
+          </h2>
+          <p className="text-gray-700 text-lg mb-6">
+            I build clean, responsive, and modern websites.
           </p>
 
-          <div className="flex justify-center md:justify-start gap-6 mb-6">
+          {/* 🔸 Social Icons */}
+          <div className="flex justify-center md:justify-start gap-6 text-2xl mb-6">
             <a
               href="https://github.com/mudityalodhi"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white text-2xl transition"
+              className="text-gray-700 hover:text-black transition"
             >
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/mudityalodhi"
+              href="https://linkedin.com/in/muditya-lodhi"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 text-2xl transition"
+              className="text-blue-600 hover:text-blue-800 transition"
             >
               <FaLinkedin />
             </a>
           </div>
 
+          {/* 🔸 CTA Button */}
           <a
             href="#contact"
-            className="inline-block bg-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-600 transition"
+            className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition shadow"
           >
-            Contact Me
+            Contact me
           </a>
         </div>
 
-        {/* Right: Profile Image */}
-        <div className="flex justify-center md:justify-end">
-          <div className="w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-blue-300 dark:border-blue-500 shadow-lg">
+        {/* 🔹 Right: Optional Placeholder Image (if you want) */}
+        <div className="flex-1 hidden md:flex justify-center">
+          <div className="w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden border-4 border-orange-300 shadow-lg">
             <img
               src={profile}
               alt="Muditya Lodhi"
@@ -66,6 +60,7 @@ const Hero = () => {
             />
           </div>
         </div>
+
       </div>
     </section>
   );

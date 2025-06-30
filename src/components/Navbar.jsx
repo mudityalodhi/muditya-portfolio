@@ -1,42 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
 
   return (
-    <nav className="fixed top-4 inset-x-0 z-50 flex justify-center px-2">
-      <div
-        className={`w-full max-w-[90%] md:max-w-5xl flex items-center justify-between h-14 px-4 rounded-full bg-white/50 backdrop-blur-md border border-blue-100 shadow-md transition-all duration-300 ${
-          scrolled ? "shadow-xl" : ""
-        }`}
-      >
+    <nav className="fixed top-0 inset-x-0 z-50 bg-white shadow-md">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-16 py-3">
         {/* Logo */}
-        <div className="text-lg sm:text-xl font-bold tracking-wider text-blue-600">
+        <a href="#home" className="text-2xl font-bold text-orange-500">
           ML
-        </div>
+        </a>
 
-        {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center gap-6 text-sm sm:text-base font-medium text-gray-700 tracking-wide">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center space-x-6 font-medium text-gray-800">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="relative hover:text-blue-600 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative hover:text-orange-500 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 hover:after:w-full after:bg-orange-500 after:transition-all after:duration-300"
               >
                 {link.name}
               </a>
@@ -44,34 +33,37 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Toggle Button */}
         <div className="md:hidden">
           <button
             onClick={() => setNavOpen(!navOpen)}
-            className="text-blue-700 focus:outline-none"
+            className="text-orange-500 text-xl"
           >
-            {navOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+            {navOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
-      {navOpen && (
-        <div className="absolute top-[70px] w-full px-4 md:hidden z-40">
-          <div className="bg-white/95 backdrop-blur-md rounded-xl shadow-xl py-4 space-y-2 max-w-[90%] mx-auto">
-            {navLinks.map((link) => (
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden ${
+          navOpen ? "max-h-60 py-3" : "max-h-0"
+        }`}
+      >
+        <ul className="flex flex-col items-center space-y-3 bg-white px-6 pt-4 pb-6 shadow-md rounded-b-lg font-medium text-gray-800">
+          {navLinks.map((link) => (
+            <li key={link.name}>
               <a
-                key={link.name}
                 href={link.href}
                 onClick={() => setNavOpen(false)}
-                className="block text-gray-800 hover:text-blue-600 text-base font-medium px-4 py-2 rounded transition duration-200"
+                className="block hover:text-orange-500 transition"
               >
                 {link.name}
               </a>
-            ))}
-          </div>
-        </div>
-      )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };
