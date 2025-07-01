@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 * {
-    font-family: Mulish, REM, Outfit, sans-serif;
+    font-family: Outfit, Mulish, REM, Outfit, sans-serif;
 }
 
 body {
