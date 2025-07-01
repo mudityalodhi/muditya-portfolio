@@ -6,12 +6,12 @@ import cssLogo from "../assets/tech_logo/css.png";
 import jsLogo from "../assets/tech_logo/javascript.png";
 import tailwindLogo from "../assets/tech_logo/tailwindcss.png";
 import reactLogo from "../assets/tech_logo/reactjs.png";
-// import viteLogo from "../assets/tech_logo/vite.png";
+import javaLogo from "../assets/tech_logo/java.png";
 
 import gitLogo from "../assets/tech_logo/git.png";
 import githubLogo from "../assets/tech_logo/github.png";
 import vscodeLogo from "../assets/tech_logo/vscode.png";
-// import figmaLogo from "../assets/tech_logo/figma.png";
+// import gitHubLogo from "../assets/tech_logo/github.png";
 
 const Skills = () => {
   return (
@@ -29,7 +29,7 @@ const Skills = () => {
               { name: "JavaScript", img: jsLogo },
               { name: "Tailwind", img: tailwindLogo },
               { name: "React", img: reactLogo },
-              // { name: "Vite", img: viteLogo },
+              { name: "Java", img: javaLogo },
             ].map((skill) => (
               <div key={skill.name} className="flex flex-col items-center w-20">
                 <img src={skill.img} alt={skill.name} className="w-12 h-12 mb-2" />
@@ -47,7 +47,7 @@ const Skills = () => {
               { name: "Git", img: gitLogo },
               { name: "GitHub", img: githubLogo },
               { name: "VS Code", img: vscodeLogo },
-              // { name: "Figma", img: figmaLogo },
+              // { name: "GitHub", img: gitHubLogo },
             ].map((tool) => (
               <div key={tool.name} className="flex flex-col items-center w-20">
                 <img src={tool.img} alt={tool.name} className="w-12 h-12 mb-2" />

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -9,8 +11,22 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message sent successfully!");
-    setForm({ name: "", email: "", message: "" });
+
+    emailjs
+      .send(
+        "service_tbu6grs",         //  Your EmailJS service ID
+        "template_91drf0p",        //  Your Template ID
+        form,
+        "R5p_af5L4lclGD9IA"        //  Your Public Key
+      )
+      .then(() => {
+        toast.success("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch((err) => {
+        console.error("Email Error:", err);
+        toast.error("Failed to send message. Try again later.");
+      });
   };
 
   return (
@@ -62,17 +78,6 @@ const Contact = () => {
             Send Message
           </button>
         </form>
-
-        {/* OR Mailto link */}
-        {/* <p className="mt-10 text-sm text-gray-600">
-          Or reach me directly at:{" "}
-          <a
-            href="mailto:mudityaofficial@gmail.com"
-            className="text-orange-500 underline"
-          >
-            inspiredmuditya@gmail.com
-          </a>
-        </p> */}
       </div>
     </section>
   );

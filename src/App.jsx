@@ -7,9 +7,13 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar/>
       <Hero/>
       <About/>
@@ -17,7 +21,18 @@ const App = () => {
       <Skills/>
       <Contact/>
       <Footer/>
-    </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="light" // ya "dark" if dark mode
+      />
+    </>
   )
 }
 

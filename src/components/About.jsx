@@ -9,19 +9,25 @@ const About = () => {
         </h2>
 
         <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
-          Hey! I’m <span className="font-semibold text-orange-500">Muditya Lodhi</span>, a frontend developer with a love for clean design, pixel-perfect UIs, and smooth user experiences.
+          Hey! I’m <span className="font-semibold text-orange-500">Muditya Lodhi</span>, a frontend developer with a curious mind, a creative heart, and a strong desire to grow — every single day.
         </p>
 
         <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
-          I started this journey with curiosity—and soon found myself addicted to building beautiful, fast, and responsive websites. Every project I take on is an opportunity to create something useful, elegant, and enjoyable for people to use.
-        </p>
-
-        <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
-          My go-to tools include{" "}
+          My coding journey started with a spark of curiosity, but it soon became a deep passion. I now build responsive, user-friendly websites using{" "}
           <span className="font-semibold text-orange-500">React</span>,{" "}
-          <span className="font-semibold text-orange-500">Tailwind CSS</span>,{" "}
-          <span className="font-semibold text-orange-500">JavaScript</span>, and{" "}
-          <span className="font-semibold text-orange-500">Git</span>. Whether it's building a sleek landing page or a scalable dashboard, I’m always pushing to grow and improve.
+          <span className="font-semibold text-orange-500">Tailwind CSS</span>, and{" "}
+          <span className="font-semibold text-orange-500">MERN</span>. I love clean design, smooth UX, and turning ideas into real, working products.
+        </p>
+
+        <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
+          But I’m not just a developer — I’m also on a mission to improve myself. From boosting my{" "}
+          <span className="font-semibold text-orange-500">communication skills</span> and{" "}
+          <span className="font-semibold text-orange-500">confidence</span> to creating content on{" "}
+          <span className="font-semibold text-orange-500">YouTube</span>, I believe in constant learning and pushing my limits.
+        </p>
+
+        <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
+          Every project I take on is not just about code — it’s about becoming better, step by step.
         </p>
 
         <a
