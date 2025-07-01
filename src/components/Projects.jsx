@@ -15,7 +15,7 @@ const projectList = [
     github: "https://github.com/mudityalodhi/shelfy",
   },
   {
-    title: "SEN",
+    title: "SEN (Idea in Development)",
     desc: "A barter based Skill exchane system built using Reactjs, Nodejs, Express and MongoDB.",
     img: sen,
     tech: ["React", "Node", "Express", "mongoDB", "TailwindCSS"],
