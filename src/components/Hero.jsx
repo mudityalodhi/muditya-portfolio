@@ -7,15 +7,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-white px-4 overflow-x-hidden"
+      className="min-h-screen flex items-center justify-center bg-white px-4"
     >
-      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-16 py-10">
-        
+      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center justify-center gap-10 py-10">
         {/* 🔹 Left Text Content */}
         <div className="text-center md:text-left flex-1">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">
-            Hi, I'm Muditya Lodhi
-          </h1>
+          <h1 className="text-xl sm:text-2xl text-gray-600 mb-1">Hi, I'm</h1>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
+            Muditya Lodhi
+          </h2>
 
           <TypeAnimation
             sequence={[
@@ -26,13 +26,13 @@ const Hero = () => {
               "React & Node Enthusiast",
               2000,
             ]}
-            wrapper="h2"
+            wrapper="h3"
             cursor={true}
             repeat={Infinity}
             className="text-orange-500 text-xl sm:text-2xl font-semibold mb-4"
           />
 
-          <p className="text-gray-700 text-lg mb-6">
+          <p className="text-gray-700 text-lg mb-6 max-w-md mx-auto md:mx-0">
             I build clean, responsive, and modern websites.
           </p>
 
@@ -66,7 +66,7 @@ const Hero = () => {
 
         {/* 🔹 Right Image */}
         <div className="flex-1 flex justify-center">
-          <div className="w-52 h-52 sm:w-70 sm:h-70 rounded-full overflow-hidden border-4 border-orange-300 shadow-lg">
+          <div className="w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-orange-300 shadow-lg hover:scale-105 transition duration-300">
             <img
               src={profile}
               alt="Muditya Lodhi"

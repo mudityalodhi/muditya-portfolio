@@ -26,7 +26,7 @@ const projectList = [
     title: "Pixabay Mini Clone",
     desc: "A Pixabay image search app.",
     img: pixabay,
-    tech: ["MERN", "MongoDB", "Express", "JavaScript"],
+    tech: ["React", "TailwindCSS", "JavaScript"],
     live: "https://pixabay-mini-clone.vercel.app/",
     github: "https://github.com/mudityalodhi/pixabay-mini-clone",
   },
