@@ -1,32 +1,34 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import shelfy from "../assets/project_img/shelfy.png"
+import shelfy from "../assets/project_img/shelfy.png";
+import sen from "../assets/project_img/sen.png";
+import pixabay from "../assets/project_img/pixabay.png";
 
 // Dummy project list (replace with your real projects)
 const projectList = [
   {
     title: "Shelfy",
     desc: "An E-commerce website built using Reactjs, Nodejs, Express and MongoDB.",
-    img: {shelfy},
-    tech: ["React", "Tailwind", "Vite", "Node", "MongoDB","Express"],
+    img: shelfy,
+    tech: ["React", "Tailwind", "Vite", "Node", "MongoDB", "Express"],
     live: "https://shelfy-ten.vercel.app/",
     github: "https://github.com/mudityalodhi/shelfy",
   },
   {
     title: "SEN",
-    desc: "A simple weather app using OpenWeather API.",
-    img: "https://via.placeholder.com/300x180.png?text=Weather+App",
-    tech: ["React","Node","Express","mongoDB", "API", "TailwindCSS"],
+    desc: "A barter based Skill exchane system built using Reactjs, Nodejs, Express and MongoDB.",
+    img: sen,
+    tech: ["React", "Node", "Express", "mongoDB", "TailwindCSS"],
     live: "https://sen-gamma.vercel.app/",
     github: "https://github.com/mudityalodhi/sen",
   },
   {
-    title: "Blog Platform",
-    desc: "A full-stack blog platform with auth and CRUD.",
-    img: "https://via.placeholder.com/300x180.png?text=Blog+Platform",
-    tech: ["MERN", "MongoDB", "Express"],
-    live: "https://your-blog.com",
-    github: "https://github.com/yourname/blog-platform",
+    title: "Pixabay Mini Clone",
+    desc: "A Pixabay image search app.",
+    img: pixabay,
+    tech: ["MERN", "MongoDB", "Express", "JavaScript"],
+    live: "https://pixabay-mini-clone.vercel.app/",
+    github: "https://github.com/mudityalodhi/pixabay-mini-clone",
   },
 ];
 

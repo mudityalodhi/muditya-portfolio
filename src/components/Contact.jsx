@@ -64,7 +64,7 @@ const Contact = () => {
         </form>
 
         {/* OR Mailto link */}
-        <p className="mt-10 text-sm text-gray-600">
+        {/* <p className="mt-10 text-sm text-gray-600">
           Or reach me directly at:{" "}
           <a
             href="mailto:mudityaofficial@gmail.com"
@@ -72,7 +72,7 @@ const Contact = () => {
           >
             inspiredmuditya@gmail.com
           </a>
-        </p>
+        </p> */}
       </div>
     </section>
   );

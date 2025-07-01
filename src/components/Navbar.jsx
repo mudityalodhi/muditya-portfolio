@@ -24,13 +24,11 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/70 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+        scrolled ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       {/* Container */}
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 h-16">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-14 h-16">
         {/* Logo */}
         <a href="#home" className="text-2xl font-bold text-orange-500">
           ML

@@ -66,7 +66,7 @@ const Hero = () => {
 
         {/* 🔹 Right Image */}
         <div className="flex-1 flex justify-center">
-          <div className="w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden border-4 border-orange-300 shadow-lg">
+          <div className="w-52 h-52 sm:w-70 sm:h-70 rounded-full overflow-hidden border-4 border-orange-300 shadow-lg">
             <img
               src={profile}
               alt="Muditya Lodhi"
