@@ -3,6 +3,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import shelfy from "../assets/project_img/shelfy.png";
 import sen from "../assets/project_img/sen.png";
 import pixabay from "../assets/project_img/pixabay.png";
+import todo from "../assets/project_img/todo.png";
 
 // Dummy project list (replace with your real projects)
 const projectList = [
@@ -28,6 +29,14 @@ const projectList = [
     img: pixabay,
     tech: ["React", "TailwindCSS", "JavaScript"],
     live: "https://pixabay-mini-clone.vercel.app/",
+    github: "https://github.com/mudityalodhi/pixabay-mini-clone",
+  },
+  {
+    title: "MERN Todo App",
+    desc: "A fullstack MERN todo app.",
+    img: todo,
+    tech: ["React", "TailwindCSS", "Express", "Node", "MongoDB", "React icons"],
+    live: "https://todo-muditya.vercel.app/",
     github: "https://github.com/mudityalodhi/pixabay-mini-clone",
   },
 ];
