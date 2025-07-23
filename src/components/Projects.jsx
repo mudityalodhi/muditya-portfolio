@@ -24,14 +24,6 @@ const projectList = [
     github: "https://github.com/mudityalodhi/sen",
   },
   {
-    title: "Pixabay Mini Clone",
-    desc: "A Pixabay image search app.",
-    img: pixabay,
-    tech: ["React", "TailwindCSS", "JavaScript"],
-    live: "https://pixabay-mini-clone.vercel.app/",
-    github: "https://github.com/mudityalodhi/pixabay-mini-clone",
-  },
-  {
     title: "MERN Todo App",
     desc: "A fullstack MERN todo app.",
     img: todo,
