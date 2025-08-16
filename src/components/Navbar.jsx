@@ -37,7 +37,7 @@ const Navbar = () => {
       {/* Container */}
       <div
         className={`flex items-center justify-between px-6 py-3 rounded-full shadow-xl
-          backdrop-blur-md bg-white/80 dark:bg-black/40
+          backdrop-blur-md bg-white
           transition-all duration-300
           w-[90vw] max-w-[700px]
           ${scrolled ? "border border-gray-200" : ""}
@@ -52,7 +52,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center space-x-6 font-medium text-gray-800 dark:text-white">
+        <ul className="hidden md:flex items-center space-x-6 font-medium text-gray-800">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
@@ -85,11 +85,11 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out rounded-xl mt-2 w-[90vw] max-w-[700px] mx-auto bg-white dark:bg-black/70 overflow-hidden
+        className={`md:hidden transition-all duration-300 ease-in-out rounded-xl mt-2 w-[90vw] max-w-[700px] mx-auto bg-white overflow-hidden
           ${navOpen ? "max-h-60 py-4" : "max-h-0 py-0"}
         `}
       >
-        <ul className="flex flex-col items-center space-y-4 text-gray-800 dark:text-white">
+        <ul className="flex flex-col items-center space-y-4 text-gray-800">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
