@@ -4,6 +4,7 @@ import shelfy from "../assets/project_img/shelfy.png";
 import sen from "../assets/project_img/sen.png";
 import pixabay from "../assets/project_img/pixabay.png";
 import todo from "../assets/project_img/todo.png";
+import portfolio from "../assets/project_img/portfolio.png";
 
 // Dummy project list (replace with your real projects)
 const projectList = [
@@ -30,6 +31,14 @@ const projectList = [
     tech: ["React", "TailwindCSS", "Express", "Node", "MongoDB", "React icons"],
     live: "https://todo-muditya.vercel.app/",
     github: "https://github.com/mudityalodhi/pixabay-mini-clone",
+  },
+  {
+    title: "Portfolio",
+    desc: "A Portfolio.",
+    img: portfolio,
+    tech: ["React", "TailwindCSS", "React icons"],
+    live: "https://muditya-portfolio.vercel.app/",
+    github: "https://github.com/mudityalodhi/muditya-portfolio",
   },
 ];
 
