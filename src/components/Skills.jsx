@@ -26,7 +26,7 @@ const Skills = () => {
 
         {/* 🔹 Frontend Skills */}
         <div className="mb-12">
-          <h3 className="text-xl text-orange-400 mb-6">Frontend</h3>
+          {/* <h3 className="text-xl text-orange-400 mb-6">Frontend</h3> */}
           <div className="flex flex-wrap justify-center gap-6">
             {[
               { name: "HTML", img: htmlLogo },
@@ -34,6 +34,9 @@ const Skills = () => {
               { name: "JavaScript", img: jsLogo },
               { name: "Tailwind", img: tailwindLogo },
               { name: "React", img: reactLogo },
+              { name: "Nodejs", img: nodeLogo },
+              { name: "Express", img: expressLogo },
+              { name: "MongoDB", img: mongodbLogo },
               { name: "Java", img: javaLogo },
             ].map((skill) => (
               <div key={skill.name} className="flex flex-col items-center w-20">
@@ -48,27 +51,7 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* 🔹 BAckend Skills */}
-        <div className="mb-12">
-          <h3 className="text-xl text-orange-400 mb-6">Backend | Database</h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {[
-              { name: "Nodejs", img: nodeLogo },
-              { name: "Express", img: expressLogo },
-              { name: "MongoDB", img: mongodbLogo },
-            ].map((skill) => (
-              <div key={skill.name} className="flex flex-col items-center w-20">
-                <img
-                  src={skill.img}
-                  alt={skill.name}
-                  className="w-12 h-12 mb-2"
-                />
-                <span className="text-sm">{skill.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
+       
         {/* 🔹 Tools */}
         <div>
           <h3 className="text-xl text-orange-400 mb-6">Tools</h3>
